@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    gap:20px;
+    margin: 150px 500px;
+}
+.item{
+    width: 100px;
+    height: 100px;
+    background-color: #cdcbcb;
+}
+.follower {
+    width: 10px;
+    height: 10px;
+    background-color: blue;
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
