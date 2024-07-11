@@ -77,9 +77,7 @@ function App() {
     return (
         <div className="App">
             <Carousel projects={projects}/>
-
-            {/*<Test/>*/}
-
+            <Test/>
         </div>
 
     );

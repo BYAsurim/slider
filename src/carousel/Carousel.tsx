@@ -33,6 +33,9 @@ export const Carousel: React.FC<PropsType> = ({projects}) => {
                 opacity: 1,
                 transform: "translateX(0px) translateZ(0px) rotateY(0deg)",
                 zIndex: 10,
+                width: '460px',
+                height: '360px',
+                top: '0px'
 
             };
         } else if (displayedIndex === 1) {
@@ -44,7 +47,7 @@ export const Carousel: React.FC<PropsType> = ({projects}) => {
                 filter: 'blur(1px)',
                 margin: '0 20px',
                 height: '450px',
-                top: '-40px'
+                top: '-40px',
             }
         } else if (displayedIndex === totalSlides - 1) {
             return {
