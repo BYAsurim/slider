@@ -10,7 +10,6 @@ import img7 from './image/6.jpg'
 import img8 from './image/7.jpg'
 import img9 from './image/8.jpg'
 import {Carousel} from "./carousel/Carousel";
-import {Test} from "./Test";
 
 export type ProjectsType = {
     category: string
@@ -77,7 +76,7 @@ function App() {
     return (
         <div className="App">
             <Carousel projects={projects}/>
-            <Test/>
+            {/*<Test/>*/}
         </div>
 
     );
