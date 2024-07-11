@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {ProjectsType} from "../../App";
 import s from './card.module.css'
 
@@ -7,12 +7,8 @@ type ProjectCardType = {
     isActive: boolean
     index: number
     height?: string
-    prev?: () => void
-    next?: () => void
 }
-export const Card: React.FC<ProjectCardType> = ({project, isActive, index, height, prev, next}) => {
-
-
+export const Card: React.FC<ProjectCardType> = ({project, isActive, index, height}) => {
 
 
     return (

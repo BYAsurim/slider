@@ -12,15 +12,24 @@ export const Carousel: React.FC<PropsType> = ({projects}) => {
     const [activeSlide, setActiveSlide] = useState(3);
     const [isHovered, setIsHovered] = useState(false);
     const [timerId, setTimerId] = useState<number>(0);
+    const [nextSlide, setNextSlide] = useState(false);
     const autoScrollInterval = 3000;
 
     const totalSlides = projects.length;
 
     const next = () => {
+        setNextSlide(true)
         setActiveSlide((prevSlide) => (prevSlide + 1) % totalSlides);
+        setTimeout(() => {
+            setNextSlide(false)
+        }, 1000)
     }
     const prev = () => {
+        setNextSlide(true)
         setActiveSlide((prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides);
+        setTimeout(() => {
+            setNextSlide(false)
+        }, 1000)
     }
     const getDisplayedIndex = (index: number) => {
         return (index - activeSlide + totalSlides) % totalSlides;
@@ -121,9 +130,9 @@ export const Carousel: React.FC<PropsType> = ({projects}) => {
                 <div className={'titleWrapper'}>
                     <div className={'titleContainer'}>
                         <h2 className={'title'}>проекты</h2>
-                        <div className={'lengthProject'} > ({projects.length})</div>
+                        <div className={'lengthProject'}> ({projects.length})</div>
                     </div>
-                    <span className={'subtext'} >Воплощаем мечты в реальность</span>
+                    <span className={'subtext'}>Воплощаем мечты в реальность</span>
                 </div>
 
                 <div className="slideC">
@@ -164,8 +173,8 @@ export const Carousel: React.FC<PropsType> = ({projects}) => {
                     </div>
 
                     <div className="btns">
-                        <SamplePrevArrow className={'btn'} onClick={prev}/>
-                        <SampleNextArrow className="btn" onClick={next}/>
+                        <SamplePrevArrow className={'btn'} onClick={prev} disabled={nextSlide}/>
+                        <SampleNextArrow className="btn" onClick={next} disabled={nextSlide}/>
                     </div>
                 </div>
             </div>

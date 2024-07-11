@@ -24,7 +24,8 @@
     & > p {
         padding-right: 5px;
     }
-    & > h3{
+
+    & > h3 {
         margin-left: 5px;
     }
 }
@@ -41,18 +42,14 @@
 }
 
 .fixedItem {
-    /*position: absolute;*/
     z-index: 20;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #393939;
-    /*max-width: 75px;*/
     cursor: pointer;
     border-radius: 10px;
-    /*right: 230px;*/
-    /*transform: translateX(-243px);*/
-    /*top: 16px*/
+
 }
 
 
@@ -65,7 +62,6 @@
     text-orientation: mixed;
     transform: rotate(180deg);
     cursor: pointer;
-
     padding: 25px 10px;
 }
 
