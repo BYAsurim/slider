@@ -145,7 +145,8 @@ export const Carousel: React.FC<PropsType> = ({projects}) => {
                                         ...getStyles(i)
                                     }}
                                 >
-                                    <Card project={item} isActive={getDisplayedIndex(i) === 0} index={i} height={'100%'}/>
+                                    <Card project={item} isActive={getDisplayedIndex(i) === 0} index={i}
+                                          height={'100%'}/>
                                 </div>
                                 <div
                                     className="reflection"
